@@ -1,0 +1,36 @@
+{
+  "dependencies": {
+    "node-ipc": "^8.10.3",
+    "pre-commit": "^1.2.2"
+  },
+  "devDependencies": {
+    "ava": "^0.18.2"
+  },
+  "name": "simple-ipc",
+  "version": "0.0.1",
+  "description": "simple ipc",
+  "main": "ipc.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "ava"
+  },
+  "pre-commit": {
+    "run": ["test"]
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lwdgit/simple-ipc.git"
+  },
+  "keywords": [
+    "ipc",
+    "node"
+  ],
+  "author": "lwdgit",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/lwdgit/simple-ipc/issues"
+  },
+  "homepage": "https://github.com/lwdgit/simple-ipc#readme"
+}

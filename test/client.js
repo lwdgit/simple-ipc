@@ -13,6 +13,7 @@ test.cb('client start', (t) => {
             },
             'mymsg': function(msg) {
                 t.is(msg, 'hello');
+                this.emit('msg', 'ok');
                 console.log('receive', msg);
                 t.end();
             }

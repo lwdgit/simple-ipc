@@ -134,6 +134,9 @@ exports.Client = class {
       this._events[event, fn];
       this.instance.on('event', fn.bind(this));
   }
+  emit(event, msg) {
+      this.instance.emit(event, msg);
+  }
   _listen() {
       const self = this;
       this.instance.on('connect', function() {

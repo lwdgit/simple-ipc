@@ -1,13 +1,6 @@
 {
-  "dependencies": {
-    "node-ipc": "^8.10.3",
-    "pre-commit": "^1.2.2"
-  },
-  "devDependencies": {
-    "ava": "^0.18.2"
-  },
   "name": "simple-ipc",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "simple ipc",
   "main": "ipc.js",
   "directories": {
@@ -15,6 +8,13 @@
   },
   "scripts": {
     "test": "ava"
+  },
+  "dependencies": {
+    "node-ipc": "^8.10.3",
+    "pre-commit": "^1.2.2"
+  },
+  "devDependencies": {
+    "ava": "^0.18.2"
   },
   "pre-commit": {
     "run": ["test"]

@@ -7,10 +7,13 @@ test.cb('server start', (t) => {
             'connect': function() {
                 this.emit('mymsg', 'hello');
             },
+            'msg': function(msg) {
+                console.log('oh, client say:', msg);
+                t.is('ok', msg);
+                t.end();
+            },
             'close': function() {
                 console.log('detect close');
-                t.pass();
-                t.end();
             }
         }
     })

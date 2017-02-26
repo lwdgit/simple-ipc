@@ -1,5 +1,5 @@
 const ipc = require('node-ipc');
-const SERVER_ID = 'server' + process.mainModule.filename.replace(/[/\\]/g, '');
+const SERVER_ID = 'server' + (process.cwd() + __filename).replace(/[/\.\\]/g, '').slice(-60);
 const server = exports.server = function (serverId = SERVER_ID) {
   ipc.config.id = serverId;
   ipc.config.retry = 500;

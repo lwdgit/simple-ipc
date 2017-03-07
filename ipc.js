@@ -109,7 +109,13 @@ exports.Server = class {
         }
     }
     emit(type, msg) {
-        for(let socket of this._socket) {
+        for(let i = 0; i < this._socket.length; i++) {
+            let socket = this._socket[i];
+            if(socket.destroyed) {
+                this._socket.splice(i, 1);
+                i--;
+                continue;
+            }
             this.instance.emit.call(this.instance, socket, type, msg);
         }
     }
